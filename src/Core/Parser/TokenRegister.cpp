@@ -20,7 +20,7 @@ void Init()
 
     Controller::Instance()->regItem<token::Unknown>(ItemType::TokenAndRule, -2);
 
-    Controller::Instance()->regUnchangedTextToken(std::make_shared<Comment>(), std::make_shared<LComment>(), nullptr);
+    Controller::Instance()->regUnchangedTextToken(std::make_shared<Comment>(), std::make_shared<LComment>(), std::make_shared<RComment>());
 
     Controller::Instance()->init();
 }
