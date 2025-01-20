@@ -1,0 +1,56 @@
+/* Prog2 */
+mainprogram 
+start
+data integer32 _Aaaaaaaaaaaaa,_Bbbbbbbbbbbbb,_Ccccccccccccc, _Ttttttttttttt;
+
+input _Aaaaaaaaaaaaa
+input _Bbbbbbbbbbbbb
+input _Ccccccccccccc
+
+if (_Aaaaaaaaaaaaa ge _Bbbbbbbbbbbbb) goto Abigger;
+
+else 
+	
+	_Ttttttttttttt <== _Aaaaaaaaaaaaa;
+
+Outofib:
+
+if (_Ccccccccccccc ge _Bbbbbbbbbbbbb && _Ccccccccccccc ge _Aaaaaaaaaaaaa) goto Outofic;
+else goto Outofif;
+
+Abigger:   
+    _Ttttttttttttt <== _Bbbbbbbbbbbbb
+    goto Outofib
+Outofic:
+    _Ttttttttttttt <== _Ccccccccccccc
+    goto Outofif
+
+Outofif:	
+	output _Ttttttttttttt
+
+if((_Aaaaaaaaaaaaa eq _Bbbbbbbbbbbbb) && (_Aaaaaaaaaaaaa eq _Ccccccccccccc) && (_Bbbbbbbbbbbbb eq _Ccccccccccccc))
+
+	output 1;
+	
+else
+
+	output 0;
+
+if((_Aaaaaaaaaaaaa le 0) || (_Bbbbbbbbbbbbb le 0) || (_Ccccccccccccc le 0))
+
+	output -1;
+	
+else
+
+	output 0;
+
+
+if(!!(_Aaaaaaaaaaaaa le (_Bbbbbbbbbbbbb + _Ccccccccccccc)))
+
+	output 10
+;	
+else
+	output 0
+;
+end
+
